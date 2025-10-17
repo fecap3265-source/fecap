@@ -8,9 +8,9 @@ export async function AboutSection() {
   const { base64 } = await getPlaiceholder(file);
 
   return (
-    <section className="py-12 lg:py-24 bg-background">
-      <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
-        <div className="relative h-96 md:h-180 rounded-lg overflow-hidden">
+    <section className="py-6 bg-background">
+      <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center px-2 sm:px-4 lg:px-6">
+        <div className="relative h-180 rounded-lg overflow-hidden">
             <Image 
               src="/about-image.jpg" 
               alt="Sobre" 
@@ -21,11 +21,14 @@ export async function AboutSection() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
         </div>
-        <div className="space-y-4 text-center md:text-left">
-            <h3 className="text-xl md:text-2xl text-muted-foreground">
+        <div 
+          className="space-y-4 text-center p-8 rounded-lg"
+          style={{ backgroundColor: '#1f304a' }}
+        >
+            <h3 className="text-xl md:text-2xl text-gray-200">
               Antônio Gomes Lacerda
             </h3>
-            <h1 className="text-4xl md:text-5xl font-bold">&quot;A educação não tem preço, sua falta tem custo&quot;</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">&quot;A educação não tem preço, sua falta tem custo&quot;</h1>
         </div>
       </div>
     </section>
