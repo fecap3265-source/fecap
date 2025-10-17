@@ -1,6 +1,6 @@
 # FCP - Frente de Capacitação Pública
 
-Este é o repositório do site institucional da FECAP (Frente de Capacitação Pública), uma plataforma dedicada a oferecer cursos e palestras de alto nível para a capacitação de servidores e gestores públicos.
+Este é o repositório do site institucional da FCP (Frente de Capacitação Pública), uma plataforma dedicada a oferecer cursos e palestras de alto nível para a capacitação de servidores e gestores públicos.
 
 ## Índice
 
