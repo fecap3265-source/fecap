@@ -6,7 +6,7 @@ export function PartnersSection() {
     <section className="bg-background py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl text-center font-bold tracking-tight mb-12">
-          SÓCIOS
+          SÓCIAS
         </h2>
 
         <div className="flex justify-center flex-wrap gap-8">
