@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 import fs from "node:fs/promises";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export async function AboutSection() {
   const imagePath = "./public/about-image.jpg";
@@ -8,7 +10,7 @@ export async function AboutSection() {
   const { base64 } = await getPlaiceholder(file);
 
   return (
-    <section className="py-6 bg-background">
+    <section className="bg-background">
       <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center px-2 sm:px-4 lg:px-6">
         <div className="relative h-180 rounded-lg overflow-hidden">
             <Image 
@@ -18,17 +20,22 @@ export async function AboutSection() {
               className="object-cover"
               placeholder="blur"
               blurDataURL={base64}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 60vw"
             />
         </div>
         <div 
-          className="space-y-4 text-center p-8 rounded-lg"
+          className="space-y-4 text-center p-18 rounded-lg -ml-24"
           style={{ backgroundColor: '#1f304a' }}
         >
-            <h3 className="text-xl md:text-2xl text-gray-200">
+            <h3 className="text-lg md:text-xl text-gray-200">
               Antônio Gomes Lacerda
             </h3>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">&quot;A educação não tem preço, sua falta tem custo&quot;</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white pt-6">&quot;A educação não tem preço, sua falta tem custo&quot;</h1>
+            <div className="pt-19">
+              <Button asChild variant="inverted" size="lg">
+                <Link href="/contato">INSCREVA-SE</Link>
+              </Button>
+            </div>
         </div>
       </div>
     </section>

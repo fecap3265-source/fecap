@@ -29,7 +29,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           
           {/* Social Media Icons (Left) - Hidden on small screens */}
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="hidden sm:flex items-center gap-3">
             {socialLinks.map(({ href, label, Icon }) => (
               <a
                 key={label}
@@ -60,7 +60,7 @@ export function Header() {
 
           {/* CTA Button (Right) - Hidden on small screens */}
           <div className="hidden sm:flex justify-self-end">
-            <Button asChild className="font-bold bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button asChild variant="action" className="font-bold">
               <Link href="/contato">INSCREVA-SE</Link>
             </Button>
           </div>
@@ -115,7 +115,7 @@ export function Header() {
                   </Link>
                 );
               })}
-               <Button asChild className="mt-4 font-bold bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+               <Button asChild variant="action" className="mt-4 font-bold w-full">
                   <Link href="/contato" onClick={() => setIsMenuOpen(false)}>INSCREVA-SE</Link>
                </Button>
                <div className="flex items-center gap-4 mt-2">

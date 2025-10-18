@@ -16,7 +16,7 @@ Este é o repositório do site institucional da FCP (Frente de Capacitação Pú
 
 ## Visão Geral
 
-O projeto foi desenvolvido com o objetivo de criar uma presença online moderna e informativa para a FECAP. O site apresenta a missão da organização, seus sócios, palestrantes convidados e informações de contato, servindo como ponto central para futuros alunos e parceiros.
+O projeto foi desenvolvido com o objetivo de criar uma presença online moderna e informativa para a FCP. O site apresenta a missão da organização, seus sócios, palestrantes convidados e informações de contato, servindo como ponto central para futuros alunos e parceiros.
 
 ## Tecnologias Utilizadas
 
@@ -34,7 +34,7 @@ A aplicação foi construída utilizando um conjunto de tecnologias modernas par
 A estrutura de pastas principal segue o padrão do Next.js App Router:
 
 ```
-fecap/
+FCP/
 ├── public/              # Arquivos estáticos (imagens, fontes, etc.)
 ├── src/
 │   ├── app/             # Rotas da aplicação (pages, layouts)
@@ -58,18 +58,10 @@ Siga os passos abaixo para configurar e rodar o projeto em seu ambiente local.
 
 ### Instalação
 
-1.  Clone o repositório para a sua máquina local:
-    ```bash
-    git clone <url-do-seu-repositorio>
-    ```
-2.  Navegue até o diretório do projeto:
-    ```bash
-    cd fecap
-    ```
-3.  Instale todas as dependências do projeto:
-    ```bash
-    npm install
-    ```
+  - Clone o repositório para a sua máquina local:
+```bash
+git clone github.com/fecap3265-source/fecap && cd fecap && npm install
+```
 
 ### Rodando em Modo de Desenvolvimento
 

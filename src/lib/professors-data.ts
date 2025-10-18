@@ -7,21 +7,21 @@ export type Professor = {
 export const mockProfessors: Professor[] = [
   {
     name: 'Dr. Wolney Nascimento Lopes Quintão',
-    title: 'Delegado da PCDF e Especialista em Direito Público, IA e Gestão Pública',
+    title: 'Delegado da PCDF | Direito Público, IA e Gestão Pública',
     imageUrl: '/prof1.jpg',
   },
   {
-    name: 'Dra. Thalyta Cambraia Faria',
+    name: 'Thalyta Cambraia Faria',
     title: 'Especialista em Direito Empresarial e Ciências Criminais',
     imageUrl: '/prof2.jpg',
   },
   {
-    name: 'Dr. Maurício Azeredo',
+    name: 'Maurício Azeredo',
     title: 'Coordenador-Geral de Orçamento e Finanças no Ministério do Esporte',
     imageUrl: '/prof3.jpg',
   },
   {
-    name: 'Dra. Elisângela Landim',
+    name: 'Elisângela Landim',
     title: 'Especialista em Gestão de Convênios e na plataforma Transferegov',
     imageUrl: '/prof4.jpg',
 }, ];
