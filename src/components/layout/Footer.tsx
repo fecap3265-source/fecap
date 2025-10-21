@@ -13,8 +13,8 @@ export function Footer() {
           {/* 1. Seção da Marca */}
           <div className="md:col-span-1 flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center gap-3 mb-6 w-fit">
-              <Image 
-                src="/logo.png" 
+              <Image
+                src="/logo.png"
                 alt="FCP Logo"
                 width={60}
                 height={60}
@@ -26,18 +26,18 @@ export function Footer() {
               Capacitação com excelência FCP.
             </p>
             <div className="flex items-center gap-4">
-              <a 
-                href="https://instagram.com/frentecapacitacao" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://instagram.com/frentecapacitacao"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#b1853a] transition-colors duration-300"
               >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#b1853a] transition-colors duration-300"
               >
                 <Linkedin className="h-6 w-6" />
@@ -60,14 +60,14 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          
+
           {/* 3. Contato */}
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Entre em Contato</h4>
             <p className="text-gray-400 mb-4">
               Envie-nos sugestões, dúvidas, mensagens no geral diretamente no e-mail abaixo:
             </p>
-            <a 
+            <a
               href="mailto:frentecapacitacao6@gmail.com"
               className="font-semibold break-all hover:underline"
               style={{ color: hoverColor }}
@@ -79,9 +79,12 @@ export function Footer() {
         </div>
 
         {/* Barra Inferior */}
-        <div className="border-t border-blue-900/50 mt-12 pt-8 text-center">
-          <p className="text-sm text-gray-500">
+        <div className="border-t border-blue-900/50 mt-12 pt-8 text-center text-gray-500 text-sm">
+          <p className="mb-2">
             © {new Date().getFullYear()} FCP. Todos os direitos reservados.
+          </p>
+          <p>
+            CNPJ: 63.269.149/0001-90
           </p>
         </div>
       </div>
