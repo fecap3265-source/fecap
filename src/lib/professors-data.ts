@@ -12,7 +12,7 @@ export const mockProfessors: Professor[] = [
   },
   {
     name: 'Thalyta Cambraia Faria',
-    title: 'Especialista em Direito Empresarial e Ciências Criminais',
+    title: 'Coordenadora-Geral de Prestação de Contas',
     imageUrl: '/prof2.jpg',
   },
   {
