@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Instagram, Linkedin, Menu } from 'lucide-react';
 import { useState } from 'react';
+import { WhatsappIcon } from '@/components/icons/WhatsappIcon';
 
 const navLinks = [
   { href: '/', label: 'INÍCIO' },
@@ -13,10 +14,20 @@ const navLinks = [
   { href: '/sobre', label: 'SOBRE' },
 ];
 
+// Lista para o Header no modo Desktop
 const socialLinks = [
-  { href: 'https://instagram.com/frentecapacitacao', label: 'Instagram', Icon: Instagram },
-  { href: 'https://linkedin.com', label: 'LinkedIn', Icon: Linkedin },
+  { href: 'https://instagram.com/frentecapacitacao', label: 'Instagram', Icon: Instagram, className: 'h-6 w-6' },
+  { href: 'https://linkedin.com', label: 'LinkedIn', Icon: Linkedin, className: 'h-6 w-6' },
+  { href: 'https://wa.me/5547984995261', label: 'WhatsApp', Icon: WhatsappIcon, className: 'h-[22px] w-[22px]' },
 ];
+
+// Lista separada para o menu mobile para manter a consistência
+const mobileSocialLinks = [
+    { href: 'https://instagram.com/frentecapacitacao', label: 'Instagram', Icon: Instagram, className: 'h-7 w-7' },
+    { href: 'https://linkedin.com', label: 'LinkedIn', Icon: Linkedin, className: 'h-7 w-7' },
+    { href: 'https://wa.me/5547984995261', label: 'WhatsApp', Icon: WhatsappIcon, className: 'h-[26px] w-[26px]' },
+];
+
 
 export function Header() {
   const pathname = usePathname();
@@ -30,7 +41,7 @@ export function Header() {
           
           {/* Social Media Icons (Left) - Hidden on small screens */}
           <div className="hidden sm:flex items-center gap-3">
-            {socialLinks.map(({ href, label, Icon }) => (
+            {socialLinks.map(({ href, label, Icon, className }) => (
               <a
                 key={label}
                 href={href}
@@ -39,7 +50,7 @@ export function Header() {
                 aria-label={label}
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
-                <Icon className="h-6 w-6" />
+                <Icon className={className} />
               </a>
             ))}
           </div>
@@ -90,8 +101,7 @@ export function Header() {
               >
                 {label}
               </Link>
-            );
-          })}
+          ); })}
         </nav>
 
         {/* Mobile Menu - Collapsible */}
@@ -99,7 +109,7 @@ export function Header() {
           <div className="sm:hidden mt-4">
             <nav className="flex flex-col items-center gap-4">
               {navLinks.map(({ href, label }) => {
-                 const isActive = pathname === href;
+                const isActive = pathname === href;
                 return (
                   <Link
                     key={href}
@@ -113,13 +123,13 @@ export function Header() {
                   >
                     {label}
                   </Link>
-                );
-              })}
-               <Button asChild variant="action" className="mt-4 font-bold w-full">
-                  <Link href="/contato" onClick={() => setIsMenuOpen(false)}>INSCREVA-SE</Link>
-               </Button>
-               <div className="flex items-center gap-4 mt-2">
-                {socialLinks.map(({ href, label, Icon }) => (
+              ); })}
+              
+              <Button asChild variant="action" className="mt-4 font-bold w-full">
+                <Link href="/contato" onClick={() => setIsMenuOpen(false)}>INSCREVA-SE</Link>
+              </Button>
+              <div className="flex items-center justify-center gap-4 mt-2">
+                {mobileSocialLinks.map(({ href, label, Icon, className }) => (
                   <a
                     key={label}
                     href={href}
@@ -128,7 +138,7 @@ export function Header() {
                     aria-label={label}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    <Icon className="h-7 w-7" />
+                    <Icon className={className} />
                   </a>
                 ))}
               </div>
